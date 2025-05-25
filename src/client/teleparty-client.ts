@@ -2,13 +2,13 @@ import { TelepartyClient, SocketEventHandler } from "teleparty-websocket-lib";
 
 const eventHandler: SocketEventHandler = {
   onConnectionReady: () => {
-    alert("Connection has been established");
+    console.log("Connection has been established");
   },
   onClose: () => {
-    alert("Socket has been closed");
+    console.log("Socket has been closed");
   },
   onMessage: (message) => {
-    alert("Received message: " + message);
+    console.log("Received message: " + JSON.stringify(message));
   },
 };
 
