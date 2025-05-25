@@ -36,3 +36,80 @@
     transform: rotate(360deg);
   }
 }
+
+.chat_application_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.chat_application_container_logo_header {
+  height: 300px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.chat_application_container_header {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 0px 20px;
+}
+
+.chat_application_container_user_details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-right: 1px solid #ddd;
+  width: 250px;
+  padding: 8px 16px;
+}
+
+.chat_application_input {
+  height: 30px;
+  font-size: 14px;
+  padding: 4px;
+  width: 228px;
+}
+
+.chat_application_user_icon {
+  border-radius: 100%;
+}
+
+.chat_application_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 34px;
+  width: 240px;
+  border: 1px solid;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: white;
+}
+
+.chat_application_create_join_chat_room {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 250px;
+  padding: 8px 16px;
+}
+
+.chat_application_create_join_chat_room_divider {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  font-size: 12px;
+}

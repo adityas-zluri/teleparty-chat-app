@@ -1,6 +1,6 @@
 import { useState } from "react";
-import client from "../client/teleparty-client";
 import { useNavigate } from "react-router-dom";
+import client from "../client/teleparty-client";
 
 export default function JoinChatRoom({ nickname, userIcon }) {
   const navigate = useNavigate();
@@ -18,10 +18,11 @@ export default function JoinChatRoom({ nickname, userIcon }) {
         type="text"
         value={roomId}
         onChange={(e) => setRoomId(e.target.value)}
+        className="chat_application_input"
+        placeholder="Enter Room ID"
       />
-
       <button
-        className="join_chat_room_button"
+        className="chat_application_button"
         onClick={joinRoom}
         disabled={!(nickname.trim() && roomId.trim())}
       >

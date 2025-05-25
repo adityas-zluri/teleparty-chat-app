@@ -12,7 +12,7 @@ export default function CreateChatRoom({ nickname, userIcon }) {
   return (
     <>
       <button
-        className="create_chat_room_button"
+        className="chat_application_button"
         onClick={createRoom}
         disabled={!nickname.trim()}
       >
