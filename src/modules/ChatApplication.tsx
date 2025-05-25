@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import JoinChatRoom from "./JoinChatRoom";
 import CreateChatRoom from "./CreateChatRoom";
+import telepartyIcon from "../assets/teleparty.svg";
 import defaultUserIcon from "../assets/defaultUserIcon.svg";
 
 export default function ChatApplication() {
@@ -26,11 +27,7 @@ export default function ChatApplication() {
     <>
       <div className="chat_application_container">
         <div className="chat_application_container_logo_header">
-          <img
-            src={`https://play-lh.googleusercontent.com/5AJ3dpVdbd1S73OJxh-WQXAkWvz79cHBQa-i2h9DbMb1OcwgID-1I5SpHTwmhl1-Trc`}
-            height={250}
-            width={250}
-          />
+          <img src={telepartyIcon} height={250} width={250} />
           <div className="chat_application_container_header">
             Teleparty Chat Application
           </div>
