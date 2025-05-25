@@ -33,7 +33,7 @@ export default function ChatApplication() {
           width={30}
         />
 
-        <JoinChatRoom />
+        <JoinChatRoom userIcon={userIcon} nickname={nickname} />
         <CreateChatRoom userIcon={userIcon} nickname={nickname} />
       </div>
     </>
