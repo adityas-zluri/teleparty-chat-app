@@ -1,5 +1,6 @@
 {
   "name": "teleparty-chat-app",
+  "homepage": "https://adityas-zluri.github.io/teleparty-chat-app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
