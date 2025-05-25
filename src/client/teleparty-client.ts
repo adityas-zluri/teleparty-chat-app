@@ -1,5 +1,7 @@
 import { TelepartyClient, SocketEventHandler } from "teleparty-websocket-lib";
 
+let callbackForOnMessage: ((msg: any) => void) | null = null;
+
 const eventHandler: SocketEventHandler = {
   onConnectionReady: () => {
     console.log("Connection has been established");
@@ -9,8 +11,15 @@ const eventHandler: SocketEventHandler = {
   },
   onMessage: (message) => {
     console.log("Received message: " + JSON.stringify(message));
+    if (callbackForOnMessage) {
+      callbackForOnMessage(message);
+    }
   },
 };
+
+export function getCallbackForOnMessage(callback: (msg: any) => void) {
+  callbackForOnMessage = callback;
+}
 
 const client = new TelepartyClient(eventHandler);
 
