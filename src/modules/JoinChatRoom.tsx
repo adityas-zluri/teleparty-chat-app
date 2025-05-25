@@ -23,7 +23,7 @@ export default function JoinChatRoom({ nickname, userIcon }) {
       <button
         className="join_chat_room_button"
         onClick={joinRoom}
-        disabled={!(nickname.trim() && userIcon && roomId.trim())}
+        disabled={!(nickname.trim() && roomId.trim())}
       >
         Join Private Room
       </button>

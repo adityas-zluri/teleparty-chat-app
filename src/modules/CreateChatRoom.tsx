@@ -14,7 +14,7 @@ export default function CreateChatRoom({ nickname, userIcon }) {
       <button
         className="create_chat_room_button"
         onClick={createRoom}
-        disabled={!(nickname.trim() && userIcon)}
+        disabled={!nickname.trim()}
       >
         Create Private Room
       </button>
