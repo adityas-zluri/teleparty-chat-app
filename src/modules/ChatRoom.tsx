@@ -5,6 +5,9 @@ import { SocketMessageTypes } from "teleparty-websocket-lib";
 import client, { getCallbackForOnMessage } from "../client/teleparty-client";
 
 export default function ChatRoom() {
+  const { hash } = window.location;
+  const roomId = hash.split("/")[2];
+
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
 
@@ -48,7 +51,7 @@ export default function ChatRoom() {
         <div className="chat_room_container_header">
           <img src={telepartyIcon} height={45} width={45} />
           <div className="chat_application_container_header">
-            Teleparty Chat Application
+            Teleparty Chat Application - Room {roomId}
           </div>
         </div>
         <div className="chat_box">
