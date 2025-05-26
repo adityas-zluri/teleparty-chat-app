@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import telepartyIcon from "../assets/teleparty.svg";
 import defaultUserIcon from "../assets/defaultUserIcon.svg";
 import { SocketMessageTypes } from "teleparty-websocket-lib";
 import client, { getCallbackForOnMessage } from "../client/teleparty-client";
 
 export default function ChatRoom() {
+  const scrollDiv = useRef(null);
   const { hash } = window.location;
   const roomId = hash.split("/")[2];
 
@@ -16,6 +17,11 @@ export default function ChatRoom() {
       setMessages((prev) => [...prev, message]);
     });
   }, []);
+
+  useEffect(() => {
+    const el = scrollDiv.current;
+    el.scrollTop = el.scrollHeight;
+  }, [messages]);
 
   const sendMessage = () => {
     client.sendMessage(SocketMessageTypes.SEND_MESSAGE, {
@@ -55,7 +61,7 @@ export default function ChatRoom() {
           </div>
         </div>
         <div className="chat_box">
-          <div className="chat_box_messages">
+          <div ref={scrollDiv} className="chat_box_messages">
             {messages.map((msg: any) => getMessageUI(msg))}
           </div>
           <div className="chat_box_input_send_button">
