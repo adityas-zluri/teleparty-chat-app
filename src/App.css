@@ -179,6 +179,7 @@
 }
 
 .chat_message_card_text {
+  word-wrap: break-word;
 }
 
 .chat_box_input_send_button {
